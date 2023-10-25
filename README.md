@@ -2,6 +2,8 @@
 
 A fork of `eslint-plugin-react` without the heavy polyfills.
 
+It will rebase and try to release in order to sync with the upstream every day, see [.github/workflows/rebase-upstream.yml](.github/workflows/rebase-upstream.yml) for details.
+
 ## Installation
 
 ```sh
