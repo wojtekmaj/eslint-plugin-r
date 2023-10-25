@@ -1,15 +1,13 @@
 'use strict';
 
-const fromEntries = require('object.fromentries');
-
 const allRules = require('../lib/rules');
 
 function filterRules(rules, predicate) {
-  return fromEntries(Object.entries(rules).filter((entry) => predicate(entry[1])));
+  return Object.fromEntries(Object.entries(rules).filter((entry) => predicate(entry[1])));
 }
 
 function configureAsError(rules) {
-  return fromEntries(Object.keys(rules).map((key) => [`react/${key}`, 2]));
+  return Object.fromEntries(Object.keys(rules).map((key) => [`react/${key}`, 2]));
 }
 
 const activeRules = filterRules(allRules, (rule) => !rule.meta.deprecated);

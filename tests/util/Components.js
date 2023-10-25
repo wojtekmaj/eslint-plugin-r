@@ -2,7 +2,6 @@
 
 const assert = require('assert');
 const eslint = require('eslint');
-const fromEntries = require('object.fromentries');
 const values = require('object.values');
 
 const Components = require('../../lib/util/Components');
@@ -28,7 +27,7 @@ describe('Components', () => {
         create: Components.detect((_context, components, util) => {
           const instructionResults = [];
 
-          const augmentedInstructions = fromEntries(
+          const augmentedInstructions = Object.fromEntries(
             Object.entries(instructions || {}).map((nodeTypeAndHandler) => {
               const nodeType = nodeTypeAndHandler[0];
               const handler = nodeTypeAndHandler[1];
