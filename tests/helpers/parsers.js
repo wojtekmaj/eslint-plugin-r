@@ -4,7 +4,6 @@ const path = require('path');
 const semver = require('semver');
 const entries = require('object.entries');
 const version = require('eslint/package.json').version;
-const flatMap = require('array.prototype.flatmap');
 const tsParserVersion = require('@typescript-eslint/parser/package.json').version;
 
 const disableNewTS = semver.satisfies(tsParserVersion, '>= 4.1') // this rule is not useful on v4.1+ of the TS parser
@@ -21,7 +20,7 @@ function minEcmaVersion(features, parserOptions) {
     Math,
     [].concat(
       (parserOptions && parserOptions.ecmaVersion) || [],
-      flatMap(entries(minEcmaVersionForFeatures), (entry) => {
+      entries(minEcmaVersionForFeatures).flatMap((entry) => {
         const f = entry[0];
         const y = entry[1];
         return features.has(f) ? y : [];
@@ -69,7 +68,7 @@ const parsers = {
     });
   },
   all: function all(tests) {
-    const t = flatMap(tests, (test) => {
+    const t = tests.flatMap((test) => {
       if (typeof test === 'string') {
         test = { code: test };
       }
