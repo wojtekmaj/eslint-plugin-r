@@ -28,3 +28,4 @@ package-lock.json
 yarn.lock
 
 .npmignore
+.yarnrc.yml
