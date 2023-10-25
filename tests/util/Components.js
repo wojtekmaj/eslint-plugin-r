@@ -1,7 +1,6 @@
 'use strict';
 
 const assert = require('assert');
-const entries = require('object.entries');
 const eslint = require('eslint');
 const fromEntries = require('object.fromentries');
 const values = require('object.values');
@@ -30,7 +29,7 @@ describe('Components', () => {
           const instructionResults = [];
 
           const augmentedInstructions = fromEntries(
-            entries(instructions || {}).map((nodeTypeAndHandler) => {
+            Object.entries(instructions || {}).map((nodeTypeAndHandler) => {
               const nodeType = nodeTypeAndHandler[0];
               const handler = nodeTypeAndHandler[1];
               return [nodeType, (node) => {

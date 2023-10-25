@@ -1,12 +1,11 @@
 'use strict';
 
 const fromEntries = require('object.fromentries');
-const entries = require('object.entries');
 
 const allRules = require('../lib/rules');
 
 function filterRules(rules, predicate) {
-  return fromEntries(entries(rules).filter((entry) => predicate(entry[1])));
+  return fromEntries(Object.entries(rules).filter((entry) => predicate(entry[1])));
 }
 
 function configureAsError(rules) {
