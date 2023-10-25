@@ -2,7 +2,6 @@
 
 const assert = require('assert');
 const eslint = require('eslint');
-const values = require('object.values');
 
 const Components = require('../../lib/util/Components');
 const parsers = require('../helpers/parsers');
@@ -70,7 +69,7 @@ describe('Components', () => {
           }`,
       }, (components) => {
         assert.equal(components.length(), 1, 'MyStatelessComponent should be detected component');
-        values(components.list()).forEach((component) => {
+        Object.values(components.list()).forEach((component) => {
           assert.equal(
             component.node.id.name,
             'MyStatelessComponent',
@@ -90,7 +89,7 @@ describe('Components', () => {
         }`,
       }, (components) => {
         assert(components.length() === 1, 'MyClassComponent should be detected component');
-        values(components.list()).forEach((component) => {
+        Object.values(components.list()).forEach((component) => {
           assert.equal(
             component.node.id.name,
             'MyClassComponent',
