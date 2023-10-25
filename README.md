@@ -208,7 +208,6 @@ Refer to the [official docs](https://eslint.org/docs/latest/user-guide/configuri
 
 The schema of the `settings.react` object would be identical to that of what's already described above in the legacy config section.
 
-<!-- markdownlint-disable-next-line no-duplicate-heading -->
 ### Shareable configs
 
 There're also 3 shareable configs.
