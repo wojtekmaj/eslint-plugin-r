@@ -23,7 +23,6 @@
     "url": "https://github.com/wojtekmaj/eslint-plugin-r"
   },
   "dependencies": {
-    "array-includes": "^3.1.6",
     "array.prototype.flatmap": "^1.3.1",
     "array.prototype.tosorted": "^1.1.1",
     "doctrine": "^2.1.0",
