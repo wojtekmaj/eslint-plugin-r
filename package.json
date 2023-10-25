@@ -26,8 +26,8 @@
     "jsx-ast-utils": "^2.4.1 || ^3.0.0",
     "minimatch": "^3.1.2",
     "prop-types": "^15.8.1",
-    "resolve": "^2.0.0-next.4",
-    "semver": "^6.3.1"
+    "resolve": "^1.22.3",
+    "semver": "^7.5.3"
   },
   "devDependencies": {
     "@babel/core": "^7.22.10",
